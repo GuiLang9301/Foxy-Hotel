@@ -5,7 +5,7 @@ import { useState } from "react";
 import CreateCabinForm from "./CreateCabinForm";
 import { useDeleteCabin } from "./useDeleteCabin";
 import { useCreateCabin } from "./useCreateCabin";
-import { AiTwotoneDelete } from "react-icons/Ai";
+import { AiTwotoneDelete } from "react-icons/ai";
 import Modal from "../../ui/Modal";
 const TableRow = styled.div`
   display: grid;
