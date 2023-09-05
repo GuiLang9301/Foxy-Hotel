@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "./Sidebar";
+import SideBar from "./SideBar";
 import Header from "./Header";
 import styled from "styled-components";
 import { Toaster } from "react-hot-toast";
@@ -28,7 +28,7 @@ function AppLayout() {
   return (
     <StyledAppLayout>
       <Header />
-      <Sidebar />
+      <SideBar />
       <Main>
         <Container>
           <Outlet />
