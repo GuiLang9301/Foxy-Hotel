@@ -19,10 +19,9 @@ export async function deleteCabin(id) {
 }
 
 export async function createCabin(newCabin) {
-  //https://jfhjouvkiqoadaeeehpd.supabase.co/storage/v1/object/public/cabin-images/cabin-001.jpg
-
   const { data, error } = await supabase
     .from("cabins")
+    //insert an object getting from the forms.
     .insert([newCabin])
     .select();
 
@@ -34,13 +33,11 @@ export async function createCabin(newCabin) {
   return data;
 }
 
-export async function editCabin(id, newCabinData) {
-  console.log(id, newCabinData);
-
+export async function editCabin(newCabinData) {
   const { data, error } = await supabase
     .from("cabins")
     .update(newCabinData)
-    .eq("id", id)
+    .eq("id", newCabinData.id)
     .select();
   if (error) {
     console.error(error);

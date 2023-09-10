@@ -38,8 +38,8 @@ function CreateCabinForm({ cabinToEdit = {}, onModalClose }) {
 
     onSubmit: isEditSession
       ? (newCabinData) => {
-          const updated = { ...newCabinData, editId };
-          mutateToEdit(updated);
+          // const updated = { ...newCabinData, editId };
+          mutateToEdit(newCabinData);
           onModalClose?.();
         }
       : (values) => {
